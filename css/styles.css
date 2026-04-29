@@ -773,6 +773,7 @@ body.detail-light .nav-links { border-bottom-color: rgba(0, 0, 0, 0.12); }
   .about-photo, .about-photo-placeholder {
     max-width: 360px;
     aspect-ratio: 1/1;
+    margin: 0 auto;
   }
 }
 
@@ -829,9 +830,17 @@ body.detail-light .nav-links { border-bottom-color: rgba(0, 0, 0, 0.12); }
   .dl-media-wrap { padding: 0 20px; }
   .dl-row { grid-template-columns: 1fr; padding: 40px 20px 24px; }
   .dl-row h2 { text-align: center; }
+  .dl-section { padding: 40px 0 16px; }
+  .dl-section:last-child { padding-bottom: 60px; }
+}
+
+@media (max-width: 600px) {
+  .nav-logo-sub { display: none; }
 }
 
 @media (max-width: 480px) {
   .hero { padding: 40px 16px 40px; }
   .nav-logo { font-size: 0.88rem; }
+  .section-banner { padding: 18px 20px; }
+  .card-title { font-size: 1.2rem; }
 }

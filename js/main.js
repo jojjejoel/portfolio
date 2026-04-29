@@ -56,7 +56,7 @@
     if (!nav) return;
 
     nav.innerHTML =
-      '<a href="' + (isSubpage ? BASE + 'index.html' : '#home') + '" class="nav-logo">Joel Schultz | Technical Audio Designer</a>' +
+      '<a href="' + (isSubpage ? BASE + 'index.html' : '#home') + '" class="nav-logo">Joel Schultz<span class="nav-logo-sub"> | Technical Audio Designer</span></a>' +
       '<button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>' +
       '<div class="nav-right" id="nav-right">' +
         '<nav class="nav-links">' +
