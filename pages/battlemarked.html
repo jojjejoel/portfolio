@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VO Pipeline Tools | Joel Schultz</title>
+  <meta name="description" content="Custom Unity editor tools for managing character vocalizations with live FMOD Studio integration — Demeo x D&D: Battlemarked.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="detail-light">
+
+  <nav id="nav" aria-label="Main navigation"></nav>
+
+  <!-- ── Hero ───────────────────────────────────────────────────────────── -->
+  <section class="dl-hero">
+    <div class="dl-hero-content">
+      <h1>VO Pipeline Tools</h1>
+      <p>Custom Unity editor tools for managing character vocalizations with live FMOD Studio integration.</p>
+    </div>
+    <svg class="dl-hero-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 90 L0 50 C 480 5, 960 90, 1440 35 L1440 90 Z" fill="#181926"/>
+    </svg>
+  </section>
+
+  <!-- ── Bark Editor — stacked (wide two-panel gif) ─────────────────────── -->
+  <section class="dl-section">
+    <div class="dl-container">
+      <h2>Bark Editor</h2>
+      <p class="dl-disclaimer">Disclaimer: This tool was built for a commercial project under NDA. All names, characters, and data shown are placeholder examples created for this portfolio.</p>
+    </div>
+    <div class="dl-media-wrap">
+      <div class="dl-media" id="media-bark-editor">
+        <img src="../assets/battlemarked/Intro.gif" alt="Bark Editor tool overview"
+             onerror="this.style.display='none'; document.getElementById('media-bark-editor').classList.add('media-missing')">
+        <p class="dl-placeholder-label">Add file: <code>assets/battlemarked/Intro.gif</code></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Wave ───────────────────────────────────────────────────────────── -->
+  <div class="dl-wave-divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 20 C 480 80, 960 0, 1440 60" stroke="#ccff00" stroke-width="1.5" fill="none"/>
+      <path d="M0 60 C 480 0, 960 80, 1440 20" stroke="#ccff00" stroke-width="1.5" fill="none"/>
+    </svg>
+  </div>
+
+  <!-- ── The Problem — text only ────────────────────────────────────────── -->
+  <section class="dl-section">
+    <div class="dl-container">
+      <h2>The Problem</h2>
+      <p>Managing character voice lines is tedious. Audio designers create events in FMOD, programmers wire them up, and changes require back-and-forth between disciplines. Tracking which characters have coverage means digging through folders. Tuning playback probability means asking a programmer to change a number.</p>
+      <p>These tools consolidate everything into one place so that designers see coverage at a glance, configure triggers, create FMOD events, and tune probability without leaving Unity or writing code.</p>
+    </div>
+  </section>
+
+  <!-- ── Wave ───────────────────────────────────────────────────────────── -->
+  <div class="dl-wave-divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 20 C 480 80, 960 0, 1440 60" stroke="#ccff00" stroke-width="1.5" fill="none"/>
+      <path d="M0 60 C 480 0, 960 80, 1440 20" stroke="#ccff00" stroke-width="1.5" fill="none"/>
+    </svg>
+  </div>
+
+  <!-- ── Character Overview — stacked (wide full-editor png) ────────────── -->
+  <section class="dl-section">
+    <div class="dl-container">
+      <h2>Character Overview</h2>
+      <p>The main editor displays every character with visual status indicators. Green means bark audio is configured. Yellow flags characters needing attention. Filter by status, audio group, or search by name to quickly find what you need.</p>
+    </div>
+    <div class="dl-media-wrap">
+      <div class="dl-media" id="media-char-overview">
+        <img src="../assets/battlemarked/Character%20Overview.png" alt="Character Overview panel"
+             onerror="this.style.display='none'; document.getElementById('media-char-overview').classList.add('media-missing')">
+        <p class="dl-placeholder-label">Add file: <code>assets/battlemarked/Character Overview.png</code></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Wave ───────────────────────────────────────────────────────────── -->
+  <div class="dl-wave-divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 20 C 480 80, 960 0, 1440 60" stroke="#ccff00" stroke-width="1.5" fill="none"/>
+      <path d="M0 60 C 480 0, 960 80, 1440 20" stroke="#ccff00" stroke-width="1.5" fill="none"/>
+    </svg>
+  </div>
+
+  <!-- ── Context-Based Triggers — two-column (narrow single-panel gif) ──── -->
+  <section class="dl-section">
+    <div class="dl-row">
+      <div class="dl-text">
+        <h2>Context-Based Triggers</h2>
+        <p>Characters respond to gameplay events: taking damage, dying, being downed, exerting effort, stepping/moving, turn start, character selection, or receiving healing. Designers select from a dropdown of available contexts. The system generates the data structure and FMOD event path automatically.</p>
+      </div>
+      <div class="dl-media" id="media-context">
+        <img src="../assets/battlemarked/Context-Based%20Triggers.gif" alt="Context-Based Triggers panel"
+             onerror="this.style.display='none'; document.getElementById('media-context').classList.add('media-missing')">
+        <p class="dl-placeholder-label">Add file: <code>assets/battlemarked/Context-Based Triggers.gif</code></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Wave ───────────────────────────────────────────────────────────── -->
+  <div class="dl-wave-divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 20 C 480 80, 960 0, 1440 60" stroke="#ccff00" stroke-width="1.5" fill="none"/>
+      <path d="M0 60 C 480 0, 960 80, 1440 20" stroke="#ccff00" stroke-width="1.5" fill="none"/>
+    </svg>
+  </div>
+
+  <!-- ── Card Bark System — two-column (narrow single-panel png) ────────── -->
+  <section class="dl-section">
+    <div class="dl-row">
+      <div class="dl-text">
+        <h2>Card Bark System</h2>
+        <p>Characters can react when using abilities. The system supports two priority tiers:</p>
+        <ul class="dl-bullets">
+          <li><strong>Card Specific Barks</strong> — unique line for one specific ability</li>
+          <li><strong>Card Tag Barks</strong> — shared line for abilities with matching category tags</li>
+        </ul>
+        <p>If an ability has multiple tags with configured barks, one is selected randomly. Designers configure the minimum needed. Runtime resolves the most specific match.</p>
+      </div>
+      <div class="dl-media" id="media-card-bark">
+        <img src="../assets/battlemarked/Card%20Bark%20System.png" alt="Card Bark System panel"
+             onerror="this.style.display='none'; document.getElementById('media-card-bark').classList.add('media-missing')">
+        <p class="dl-placeholder-label">Add file: <code>assets/battlemarked/Card Bark System.png</code></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Wave ───────────────────────────────────────────────────────────── -->
+  <div class="dl-wave-divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 20 C 480 80, 960 0, 1440 60" stroke="#ccff00" stroke-width="1.5" fill="none"/>
+      <path d="M0 60 C 480 0, 960 80, 1440 20" stroke="#ccff00" stroke-width="1.5" fill="none"/>
+    </svg>
+  </div>
+
+  <!-- ── Additional Bark Types — two-column (narrow single-panel gif) ───── -->
+  <section class="dl-section">
+    <div class="dl-row">
+      <div class="dl-text">
+        <h2>Additional Bark Types</h2>
+        <p>Beyond context triggers and ability reactions, characters can respond to combat outcomes:</p>
+        <ul class="dl-bullets">
+          <li><strong>Dice Outcome Barks</strong> — triggered after dice rolls resolve (hit, miss, critical hit)</li>
+          <li><strong>After-Miss Outcome Barks</strong> — triggered when attacks miss (hitting empty tile, accidentally hitting enemy, accidentally hitting ally)</li>
+        </ul>
+        <p>Each type has its own dropdown for adding entries.</p>
+      </div>
+      <div class="dl-media" id="media-additional-barks">
+        <img src="../assets/battlemarked/Additional%20Bark%20Types.gif" alt="Additional Bark Types panel"
+             onerror="this.style.display='none'; document.getElementById('media-additional-barks').classList.add('media-missing')">
+        <p class="dl-placeholder-label">Add file: <code>assets/battlemarked/Additional Bark Types.gif</code></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Wave ───────────────────────────────────────────────────────────── -->
+  <div class="dl-wave-divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 20 C 480 80, 960 0, 1440 60" stroke="#ccff00" stroke-width="1.5" fill="none"/>
+      <path d="M0 60 C 480 0, 960 80, 1440 20" stroke="#ccff00" stroke-width="1.5" fill="none"/>
+    </svg>
+  </div>
+
+  <!-- ── Voice Over Groups — two-column (narrow single-panel png) ───────── -->
+  <section class="dl-section">
+    <div class="dl-row">
+      <div class="dl-text">
+        <h2>Voice Over Groups</h2>
+        <p>Not every character needs unique voice lines. Voice Over Groups let designers assign characters to shared bark definitions. All characters in a group use the same fallback barks, reducing redundant work for background characters or enemy types.</p>
+      </div>
+      <div class="dl-media" id="media-vo-groups">
+        <img src="../assets/battlemarked/voiceovergroups.png" alt="Voice Over Groups panel"
+             onerror="this.style.display='none'; document.getElementById('media-vo-groups').classList.add('media-missing')">
+        <p class="dl-placeholder-label">Add file: <code>assets/battlemarked/voiceovergroups.png</code></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Wave ───────────────────────────────────────────────────────────── -->
+  <div class="dl-wave-divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 20 C 480 80, 960 0, 1440 60" stroke="#ccff00" stroke-width="1.5" fill="none"/>
+      <path d="M0 60 C 480 0, 960 80, 1440 20" stroke="#ccff00" stroke-width="1.5" fill="none"/>
+    </svg>
+  </div>
+
+  <!-- ── FMOD Integration — stacked (wide two-panel gif) ───────────────── -->
+  <section class="dl-section">
+    <div class="dl-container">
+      <h2>FMOD Integration</h2>
+      <p>The tools communicate directly with FMOD Studio. When a designer clicks "Create FMOD Event," the event appears in FMOD immediately — correct folder, correct bank, ready for audio. No export/import workflow. No manual navigation.</p>
+      <p>After creating events, banks need to be built to hear audio in-game. A "Build FMOD Banks" button at the bottom of every editor window triggers the build directly from Unity.</p>
+    </div>
+    <div class="dl-media-wrap">
+      <div class="dl-media" id="media-fmod">
+        <img src="../assets/battlemarked/FMOD%20Integration.gif" alt="FMOD Integration"
+             onerror="this.style.display='none'; document.getElementById('media-fmod').classList.add('media-missing')">
+        <p class="dl-placeholder-label">Add file: <code>assets/battlemarked/FMOD Integration.gif</code></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Wave ───────────────────────────────────────────────────────────── -->
+  <div class="dl-wave-divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 20 C 480 80, 960 0, 1440 60" stroke="#ccff00" stroke-width="1.5" fill="none"/>
+      <path d="M0 60 C 480 0, 960 80, 1440 20" stroke="#ccff00" stroke-width="1.5" fill="none"/>
+    </svg>
+  </div>
+
+  <!-- ── Probability Controls — stacked with two-image pair ────────────── -->
+  <section class="dl-section">
+    <div class="dl-container">
+      <h2>Probability Controls</h2>
+      <p>Not every bark should play every time. Two probability settings control playback:</p>
+      <ul class="dl-bullets">
+        <li><strong>Any Bark %</strong> — chance that any bark (spoken or non-spoken) plays at all</li>
+        <li><strong>Spoken %</strong> — when a bark entry has both voiced lines and a non-spoken event, this controls the chance to play the spoken version vs the non-spoken one</li>
+      </ul>
+      <p>Global defaults are set per team (Players vs Enemies) and per context type. Individual entries can override these with a checkbox and slider. The "Override Spoken %" option only appears when an entry has both types configured.</p>
+    </div>
+    <div class="dl-media-wrap">
+      <div class="dl-media-pair">
+        <div class="dl-media" id="media-prob-1">
+          <img src="../assets/battlemarked/Probability%20Controls%201.gif" alt="Probability Controls — global settings"
+               onerror="this.style.display='none'; document.getElementById('media-prob-1').classList.add('media-missing')">
+          <p class="dl-placeholder-label">Add file: <code>assets/battlemarked/Probability Controls 1.gif</code></p>
+        </div>
+        <div class="dl-media" id="media-prob-2">
+          <img src="../assets/battlemarked/Probability%20Controls%202.gif" alt="Probability Controls — entry overrides"
+               onerror="this.style.display='none'; document.getElementById('media-prob-2').classList.add('media-missing')">
+          <p class="dl-placeholder-label">Add file: <code>assets/battlemarked/Probability Controls 2.gif</code></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="../data/projects.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
