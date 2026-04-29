@@ -602,7 +602,7 @@ body.detail-light .nav-links { border-bottom-color: rgba(0, 0, 0, 0.12); }
 
 /* ─── Detail Page — Content Sections ───────────────────────────────────── */
 .dl-section {
-  padding: 64px 0 24px;
+  padding: 56px 0 48px;
 }
 
 .dl-section:last-child { padding-bottom: 80px; }
@@ -711,7 +711,7 @@ body.detail-light .nav-links { border-bottom-color: rgba(0, 0, 0, 0.12); }
   align-items: center;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 64px 40px 24px;
+  padding: 0 40px;
 }
 
 .dl-row h2 { text-align: left; margin-bottom: 16px; }
@@ -742,16 +742,15 @@ body.detail-light .nav-links { border-bottom-color: rgba(0, 0, 0, 0.12); }
   .dl-media-pair { grid-template-columns: 1fr; }
 }
 
-/* ─── Detail Page — Wave Divider ────────────────────────────────────────── */
-.dl-wave-divider {
-  overflow: hidden;
-  line-height: 0;
-  padding: 4px 0;
+/* ─── Detail Page — Section Divider ─────────────────────────────────────── */
+.dl-divider {
+  height: 4px;
+  background: var(--accent);
+  margin: 0 40px;
 }
 
-.dl-wave-divider svg {
-  width: 100%;
-  display: block;
+@media (max-width: 768px) {
+  .dl-divider { margin: 0 20px; }
 }
 
 /* ─── Responsive ─────────────────────────────────────────────────────────── */
@@ -828,9 +827,9 @@ body.detail-light .nav-links { border-bottom-color: rgba(0, 0, 0, 0.12); }
   .dl-hero-content { padding: 56px 20px 36px; }
   .dl-container { padding: 0 20px; }
   .dl-media-wrap { padding: 0 20px; }
-  .dl-row { grid-template-columns: 1fr; padding: 40px 20px 24px; }
+  .dl-row { grid-template-columns: 1fr; padding: 0 20px; }
   .dl-row h2 { text-align: center; }
-  .dl-section { padding: 40px 0 16px; }
+  .dl-section { padding: 40px 0 32px; }
   .dl-section:last-child { padding-bottom: 60px; }
 }
 
