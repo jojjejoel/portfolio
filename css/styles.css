@@ -52,7 +52,7 @@ img { max-width: 100%; display: block; }
 }
 
 .nav-logo {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: var(--accent-dark);
   letter-spacing: -0.01em;
@@ -73,7 +73,7 @@ img { max-width: 100%; display: block; }
 }
 
 .nav-links a {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 500;
   color: var(--accent-dark);
   transition: color 0.2s;
@@ -92,9 +92,9 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
-  border: 1.5px solid var(--border);
+  width: 42px;
+  height: 42px;
+  border: 3px solid rgba(174, 192, 171, 1);
   border-radius: 50%;
   color: var(--text);
   transition: color 0.2s, border-color 0.2s;
@@ -105,15 +105,15 @@ img { max-width: 100%; display: block; }
   border-color: rgba(255, 255, 255, 0.4);
 }
 
-.social-icon svg { width: 16px; height: 16px; }
+.social-icon svg { width: 18px; height: 18px; }
 
 .btn-resume {
   display: inline-flex;
   align-items: center;
-  padding: 8px 20px;
+  padding: 9px 22px;
   border: 2px solid var(--accent-dark);
   border-radius: 999px;
-  font-size: 0.875rem;
+  font-size: 0.95rem;
   font-weight: 600;
   background: var(--accent-dark);
   color: var(--bg-dark);
