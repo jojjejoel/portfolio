@@ -164,8 +164,8 @@
     if (document.getElementById('hero-video')) {
       renderHero();
       renderSection(PORTFOLIO.shippedGames, 'shipped-games-list', false);
-      renderSection(PORTFOLIO.soundRedesigns, 'sound-redesigns-list', false);
-      renderSection(PORTFOLIO.personalProjects, 'personal-projects-list', true);
+      renderSection(PORTFOLIO.soundRedesigns, 'sound-redesigns-list', true);
+      renderSection(PORTFOLIO.personalProjects, 'personal-projects-list', false);
       renderAbout();
     }
   });
