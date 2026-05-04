@@ -127,7 +127,9 @@
   function renderSection(projects, containerId, flip) {
     var container = document.getElementById(containerId);
     if (!container) return;
-    container.innerHTML = projects.map(function (p) {
+    container.innerHTML = projects.filter(function (p) {
+      return !p.hidden;
+    }).map(function (p) {
       return renderProjectCard(p, flip || false);
     }).join('');
   }

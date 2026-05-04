@@ -126,6 +126,7 @@ var PORTFOLIO = {
     },
     {
       id: "sound-playground",
+      hidden: true,
       title: "Sound Playground",
       paragraphs: [
         "An experimental audio sandbox built with Wwise C++ API integration."
@@ -142,6 +143,7 @@ var PORTFOLIO = {
     },
     {
       id: "theremin-hero",
+      hidden: true,
       title: "Theremin Hero",
       paragraphs: [
         "Created during a game jam, this VR project is an experimental musical experience where players control pitch, volume, and vibrato using only hand tracking. Inspired by the theremin, it transforms intuitive gestures into expressive sound, creating a virtual instrument you can play. Developed in Unity with Wwise, the project let me explore the intersection of musicality and real-time audio programming within a tight jam setting."
