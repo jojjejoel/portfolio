@@ -236,6 +236,14 @@ img { max-width: 100%; display: block; }
   letter-spacing: -0.02em;
 }
 
+.section-banner-sub {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--bg-dark);
+  opacity: 0.65;
+  margin-top: 6px;
+}
+
 /* ─── Projects List ─────────────────────────────────────────────────────── */
 .projects-list {
   display: flex;
