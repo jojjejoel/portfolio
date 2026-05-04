@@ -1,13 +1,13 @@
 /* ─── Custom Properties ─────────────────────────────────────────────────── */
 :root {
-  --bg:          #181926;
-  --bg-dark:     #12131e;
-  --bg-card:     #1e1f30;
-  --accent:      #ccff00;
-  --accent-dark: #aad900;
-  --text:        #ffffff;
-  --text-muted:  rgba(255, 255, 255, 0.72);
-  --border:      rgba(255, 255, 255, 0.10);
+  --bg:          #212E21;
+  --bg-dark:     #1a261a;
+  --bg-card:     #2a3a2a;
+  --accent:      #AEC0AB;
+  --accent-dark: #EBFC72;
+  --text:        #F4F3E8;
+  --text-muted:  #E6DCC8;
+  --border:      rgba(174, 192, 171, 0.18);
   --radius:      14px;
   --radius-sm:   8px;
   --nav-h:       68px;
@@ -54,7 +54,7 @@ img { max-width: 100%; display: block; }
 .nav-logo {
   font-size: 1rem;
   font-weight: 700;
-  color: var(--accent);
+  color: var(--accent-dark);
   letter-spacing: -0.01em;
   white-space: nowrap;
   flex-shrink: 0;
@@ -75,7 +75,7 @@ img { max-width: 100%; display: block; }
 .nav-links a {
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--text-muted);
+  color: var(--accent-dark);
   transition: color 0.2s;
   white-space: nowrap;
 }
@@ -96,7 +96,7 @@ img { max-width: 100%; display: block; }
   height: 36px;
   border: 1.5px solid var(--border);
   border-radius: 50%;
-  color: var(--text-muted);
+  color: var(--text);
   transition: color 0.2s, border-color 0.2s;
 }
 
@@ -111,17 +111,19 @@ img { max-width: 100%; display: block; }
   display: inline-flex;
   align-items: center;
   padding: 8px 20px;
-  border: 2px solid var(--accent);
+  border: 2px solid var(--accent-dark);
   border-radius: 999px;
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--accent);
-  transition: background 0.2s, color 0.2s;
+  background: var(--accent-dark);
+  color: var(--bg-dark);
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
   white-space: nowrap;
 }
 
 .btn-resume:hover {
   background: var(--accent);
+  border-color: var(--accent);
   color: var(--bg-dark);
 }
 
@@ -220,7 +222,7 @@ img { max-width: 100%; display: block; }
 }
 
 .section-banner {
-  background: var(--accent);
+  background: var(--accent-dark);
   padding: 28px 40px;
   border-radius: 16px;
   margin: 0 24px 56px;
@@ -275,7 +277,7 @@ img { max-width: 100%; display: block; }
 .card-title {
   font-size: clamp(1.3rem, 2.5vw, 1.7rem);
   font-weight: 700;
-  color: var(--accent);
+  color: var(--accent-dark);
   line-height: 1.25;
   margin-bottom: 18px;
   letter-spacing: -0.02em;
@@ -292,12 +294,12 @@ img { max-width: 100%; display: block; }
 .card-body strong { color: var(--text); font-weight: 600; }
 
 .accent-link {
-  color: var(--accent);
+  color: var(--accent-dark);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
-.accent-link:hover { color: var(--accent-dark); }
+.accent-link:hover { color: var(--text); }
 
 .card-bullets {
   list-style: none;
@@ -318,7 +320,7 @@ img { max-width: 100%; display: block; }
   content: "•";
   position: absolute;
   left: 0;
-  color: var(--accent);
+  color: var(--accent-dark);
   font-size: 1.1em;
   line-height: 1;
   top: 3px;
@@ -337,7 +339,7 @@ img { max-width: 100%; display: block; }
   display: inline-flex;
   align-items: center;
   padding: 10px 22px;
-  background: var(--accent);
+  background: var(--accent-dark);
   color: var(--bg-dark);
   font-size: 0.875rem;
   font-weight: 600;
@@ -346,7 +348,7 @@ img { max-width: 100%; display: block; }
 }
 
 .btn-accent:hover {
-  background: var(--accent-dark);
+  background: var(--accent);
   transform: translateY(-1px);
 }
 
@@ -413,7 +415,7 @@ img { max-width: 100%; display: block; }
 .about-text h2 {
   font-size: clamp(1.8rem, 3vw, 2.4rem);
   font-weight: 700;
-  color: var(--accent);
+  color: var(--accent-dark);
   margin-bottom: 24px;
   letter-spacing: -0.02em;
 }
@@ -467,7 +469,7 @@ img { max-width: 100%; display: block; }
 .detail-title {
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 700;
-  color: var(--accent);
+  color: var(--accent-dark);
   letter-spacing: -0.03em;
   line-height: 1.15;
   margin-bottom: 48px;
@@ -513,12 +515,12 @@ img { max-width: 100%; display: block; }
   content: "•";
   position: absolute;
   left: 0;
-  color: var(--accent);
+  color: var(--accent-dark);
 }
 
 /* ─── Detail Page — Light Nav Theme ────────────────────────────────────── */
 body.detail-light #nav {
-  background: var(--accent);
+  background: var(--accent-dark);
   border-bottom-color: rgba(0, 0, 0, 0.08);
 }
 
@@ -552,7 +554,7 @@ body.detail-light .btn-resume:hover {
 body.detail-light .nav-toggle span { background: var(--bg-dark); }
 
 body.detail-light .nav-right {
-  background: var(--accent);
+  background: var(--accent-dark);
   border-bottom-color: rgba(0, 0, 0, 0.08);
 }
 
@@ -560,7 +562,7 @@ body.detail-light .nav-links { border-bottom-color: rgba(0, 0, 0, 0.12); }
 
 /* ─── Detail Page — Hero ────────────────────────────────────────────────── */
 .dl-hero {
-  background: var(--accent);
+  background: var(--accent-dark);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -616,14 +618,14 @@ body.detail-light .nav-links { border-bottom-color: rgba(0, 0, 0, 0.12); }
 .dl-section h2 {
   font-size: clamp(1.7rem, 3.5vw, 2.4rem);
   font-weight: 700;
-  color: var(--accent);
+  color: var(--accent-dark);
   text-align: center;
   margin-bottom: 24px;
   letter-spacing: -0.02em;
 }
 
 .dl-disclaimer {
-  border-left: 3px solid var(--accent);
+  border-left: 3px solid var(--accent-dark);
   padding-left: 16px;
   color: var(--text-muted);
   font-size: 0.88rem;
@@ -660,7 +662,7 @@ body.detail-light .nav-links { border-bottom-color: rgba(0, 0, 0, 0.12); }
   content: "•";
   position: absolute;
   left: 0;
-  color: var(--accent);
+  color: var(--accent-dark);
 }
 
 .dl-bullets strong { color: var(--text); font-weight: 600; }
@@ -724,7 +726,7 @@ body.detail-light .nav-links { border-bottom-color: rgba(0, 0, 0, 0.12); }
 }
 
 .dl-placeholder-label code {
-  color: var(--accent);
+  color: var(--accent-dark);
   font-family: 'Courier New', monospace;
   font-size: 0.9em;
 }
@@ -745,7 +747,7 @@ body.detail-light .nav-links { border-bottom-color: rgba(0, 0, 0, 0.12); }
 /* ─── Detail Page — Section Divider ─────────────────────────────────────── */
 .dl-divider {
   height: 4px;
-  background: var(--accent);
+  background: var(--accent-dark);
   margin: 0 40px;
 }
 
