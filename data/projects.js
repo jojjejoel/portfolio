@@ -13,8 +13,8 @@ var PORTFOLIO = {
     photo: "assets/joel-photo.jpg",
     resumeUrl: "assets/Joel_Schultz_CV.pdf",
     paragraphs: [
-      "I’m Joel Schultz, a technical audio designer working with sound design and real time audio systems for games.",
-      "At <a href=\"https://resolutiongames.com\" target=\"_blank\" rel=\"noopener\" class=\"accent-link\">Resolution Games</a>, I develop and maintain audio systems, tools, and workflows using Wwise, FMOD, and C#. My work sits between sound design and engineering, with a focus on middleware integration, gameplay driven audio behavior, and production ready implementation. I build audio tools and pipelines that scale across multiple projects and support designers with fast iteration and clear workflows.",
+      "I’m Joel Schultz, a technical audio designer with a focus on sound design and real time audio systems for games.",
+      "Most recently at <a href=\"https://resolutiongames.com\" target=\"_blank\" rel=\"noopener\" class=\"accent-link\">Resolution Games</a>, I developed and maintained audio systems, tools, and workflows using Wwise, FMOD, and C#. My work sits between sound design and engineering, with a focus on middleware integration, gameplay driven audio behavior, and production ready implementation. I built audio tools and pipelines that scale across multiple projects and support designers with fast iteration and clear workflows.",
       "I have worked on adaptive voice over systems, gameplay reactive music, event based sound effects, and audio driven haptics. I work closely with sound designers and programmers to make sure audio systems are reliable, flexible, and work well within real production constraints.",
       "Outside of game development, I write and record music as an independent country and Americana artist, which influences how I think about tone, atmosphere, and musicality in interactive sound.",
       "<strong>Open to full time roles and contract work.</strong>"
