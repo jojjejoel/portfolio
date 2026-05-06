@@ -146,8 +146,8 @@
 
     var soundcloudEmbed =
       '<div class="soundcloud-wrap">' +
-        '<iframe width="100%" height="83" scrolling="no" frameborder="no" allow="autoplay" ' +
-          'src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1141784041&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">' +
+        '<iframe width="100%" height="83" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" ' +
+          'src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1141784041&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">' +
         '</iframe>' +
       '</div>';
 
