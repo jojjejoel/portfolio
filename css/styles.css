@@ -280,7 +280,6 @@ img { max-width: 100%; display: block; }
   max-width: 680px;
 }
 
-.card-text {}
 
 .card-title {
   font-size: clamp(1.3rem, 2.5vw, 1.7rem);
@@ -446,10 +445,25 @@ img { max-width: 100%; display: block; }
   margin-top: 32px;
 }
 
+.about-actions-left {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
 .about-social {
   display: flex;
   gap: 10px;
   align-items: center;
+}
+
+.soundcloud-wrap {
+  flex: 1;
+  min-width: 195px;
+  max-width: 300px;
+  border-radius: var(--radius);
+  overflow: hidden;
 }
 
 /* ─── Detail Page ───────────────────────────────────────────────────────── */

@@ -144,14 +144,24 @@
       ? '<img src="' + PORTFOLIO.about.photo + '" alt="Joel Schultz" class="about-photo">'
       : '<div class="about-photo-placeholder">Add joel-photo.jpg to the assets/ folder</div>';
 
+    var soundcloudEmbed =
+      '<div class="soundcloud-wrap">' +
+        '<iframe width="100%" height="83" scrolling="no" frameborder="no" allow="autoplay" ' +
+          'src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1141784041&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">' +
+        '</iframe>' +
+      '</div>';
+
     container.innerHTML =
       '<div class="about-photo-wrap">' + photoHtml + '</div>' +
       '<div class="about-text">' +
         '<h2>Hello there,</h2>' +
         paragraphsHtml(PORTFOLIO.about.paragraphs) +
         '<div class="about-actions">' +
-          '<a href="' + PORTFOLIO.about.resumeUrl + '" target="_blank" rel="noopener" class="btn-accent">Resume</a>' +
-          '<div class="about-social">' + socialIconsHtml() + '</div>' +
+          '<div class="about-actions-left">' +
+            '<a href="' + PORTFOLIO.about.resumeUrl + '" target="_blank" rel="noopener" class="btn-accent">Resume</a>' +
+            '<div class="about-social">' + socialIconsHtml() + '</div>' +
+          '</div>' +
+          soundcloudEmbed +
         '</div>' +
       '</div>';
   }
