@@ -88,9 +88,7 @@
 
   function renderHero() {
     var heroVideo = document.getElementById('hero-video');
-    var heroSocial = document.getElementById('hero-social');
     if (heroVideo) heroVideo.innerHTML = videoEmbed(PORTFOLIO.heroYoutubeId);
-    if (heroSocial) heroSocial.innerHTML = socialIconsHtml();
   }
 
   // ── Project Card ─────────────────────────────────────────────────────────

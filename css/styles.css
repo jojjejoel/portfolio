@@ -196,19 +196,6 @@ img { max-width: 100%; display: block; }
   max-width: 840px;
 }
 
-.hero-social {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-}
-
-.hero-social .social-icon {
-  width: 44px;
-  height: 44px;
-}
-
-.hero-social .social-icon svg { width: 20px; height: 20px; }
-
 /* ─── Video Embed ───────────────────────────────────────────────────────── */
 .video-wrapper {
   position: relative;
