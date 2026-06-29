@@ -128,13 +128,14 @@ var PORTFOLIO = {
       id: "diffraction-ray-tracer",
       title: "Audio Diffraction Ray Tracer",
       paragraphs: [
-        "I wanted to explore whether I could build my own ray tracing system in Unreal Engine where sounds diffract realistically, giving the impression of audio bending around corners and walls rather than cutting off abruptly. The core idea is that when a ray hits a surface it can find geometric edges and cast onward from there, using those as diffraction points. To keep it viable for real use, the ray casts are distributed asynchronously across frames, trying to minimise the total number of casts while still getting convincing results."
-      ],
+        "Most games treat occlusion as binary. The room-and-portal alternative requires manual authoring and falls apart with destructible geometry. I wanted a fully dynamic approach: rays that detect geometric edges and cast onward from those as diffraction waypoints, moving a virtual source to where sound actually arrives from. The challenge was keeping it real-time viable."],
       bullets: [
-        "Geometric edge detection as diffraction points",
-        "Lowpass on the source, highpass and reverb on the virtual position",
         "Async ray casts distributed across frames to limit per-frame cost",
-        "Still a proof of concept, not yet stress tested with multiple sources"
+        "Persistent edge cache to avoid rediscovering known diffraction points each sweep",
+        "Geometric edge detection as diffraction waypoints",
+        "Lowpass filter on the occluded source; highpass and reverb blended in from the virtual diffraction position",
+        "Works with any geometry at runtime, including destructible environments",
+        "Proof of concept, not yet stress-tested with multiple simultaneous sources"
       ],
       youtubeId: "-g8NSRYoBws"
     },
