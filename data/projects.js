@@ -13,8 +13,8 @@ var PORTFOLIO = {
     photo: "assets/joel-photo.jpg",
     resumeUrl: "assets/Joel_Schultz_CV.pdf",
     paragraphs: [
-      "I’m Joel Schultz, a technical audio designer with a focus on sound design and real time audio systems for games.",
-      "Most recently at <a href=\"https://resolutiongames.com\" target=\"_blank\" rel=\"noopener\" class=\"accent-link\">Resolution Games</a>, I developed and maintained audio systems, tools, and workflows using Wwise, FMOD, and C#. My work sits between sound design and engineering, with a focus on middleware integration, gameplay driven audio behavior, and production ready implementation. I built audio tools and pipelines that scale across multiple projects and support designers with fast iteration and clear workflows.",
+      "I’m Joel Schultz, an audio programmer with a focus on real-time audio systems, tools, and sound design for games.",
+      "Most recently at <a href=\"https://resolutiongames.com\" target=\"_blank\" rel=\"noopener\" class=\"accent-link\">Resolution Games</a>, I developed and maintained audio systems, tools, and workflows using Wwise, FMOD, and C#, with a C++ background from my game programming education. My focus is on middleware integration, gameplay-driven audio behavior, and production-ready implementation. I built audio tools and pipelines that scale across multiple projects and support designers with fast iteration and clear workflows.",
       "I have worked on adaptive voice over systems, gameplay reactive music, event based sound effects, and audio driven haptics. I work closely with sound designers and programmers to make sure audio systems are reliable, flexible, and work well within real production constraints.",
       "Outside of game development, I write and record music as an independent country and Americana artist, which influences how I think about tone, atmosphere, and musicality in interactive sound.",
       "<strong>Open to full time roles and contract work.</strong>"
@@ -26,10 +26,10 @@ var PORTFOLIO = {
       id: "battlemarked",
       title: "Demeo x Dungeons &amp; Dragons: Battlemarked",
       paragraphs: [
-        "I worked on <strong>audio systems and tools</strong> for <a href=\"https://resolutiongames.com/games/demeo-dungeons-and-dragons-battlemarked\" target=\"_blank\" rel=\"noopener\" class=\"accent-link\">Demeo x Dungeons &amp; Dragons: Battlemarked</a>, focusing on scalable solutions for the game’s <strong>VO</strong> and <strong>abilities</strong>. My work includes:"
+        "I worked on audio systems and tools, focusing on scalable solutions for the game’s VO and abilities. My work includes:"
       ],
       bullets: [
-        "<a href=\"pages/battlemarked.html\" class=\"accent-link\"><strong>Developing tools</strong></a> that help sound designers implement and refine audio efficiently.",
+        "Developing tools that help sound designers implement and refine audio efficiently.",
         "Building scalable systems to manage large volumes of voice-over and ability sounds dynamically.",
         "Designing and refining how VO is triggered, prioritized, and mixed in-game, including hands-on editing of VO assets when needed.",
         "Contributing to sound design where needed to support and validate audio systems."
@@ -128,7 +128,7 @@ var PORTFOLIO = {
       id: "diffraction-ray-tracer",
       title: "Audio Diffraction Ray Tracer",
       paragraphs: [
-        "Most games treat occlusion as binary. The room-and-portal alternative requires manual authoring and falls apart with destructible geometry. I wanted a fully dynamic approach: rays that detect geometric edges and cast onward from those as diffraction waypoints, moving a virtual source to where sound actually arrives from. The challenge was keeping it real-time viable."],
+        "Most games treat occlusion as binary. The room-and-portal alternative requires manual authoring and falls apart with destructible geometry. I wanted a fully dynamic approach: rays that detect geometric edges and cast onward from those as diffraction waypoints, moving a virtual source to where sound actually arrives from. Built in Unreal Engine as a personal project. The challenge was keeping it real-time viable."],
       bullets: [
         "Async ray casts distributed across frames to limit per-frame cost",
         "Persistent edge cache to avoid rediscovering known diffraction points each sweep",
