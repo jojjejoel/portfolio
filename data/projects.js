@@ -25,6 +25,7 @@ var PORTFOLIO = {
     {
       id: "battlemarked",
       title: "Demeo x Dungeons &amp; Dragons: Battlemarked",
+      tech: "Unity, C#, FMOD • Meta Quest, PC &amp; PS5 (VR and flatscreen)",
       paragraphs: [
         "I worked on audio systems and tools, focusing on scalable solutions for the game’s VO and abilities. My work includes:"
       ],
@@ -41,6 +42,7 @@ var PORTFOLIO = {
     {
       id: "spatial-ops",
       title: "Spatial Ops",
+      tech: "Unity, C#, Wwise • Meta Quest, Pico",
       paragraphs: [
         "I developed core audio systems for Spatial Ops, focusing on scalable weapon logic, VO behavior, and real-time audio effects. My work includes:"
       ],
@@ -56,6 +58,7 @@ var PORTFOLIO = {
     {
       id: "racket-club",
       title: "Racket Club",
+      tech: "Unity, C#, Wwise • Meta Quest, Steam, Pico",
       paragraphs: [
         "I worked as an audio programmer on this game; implementing audio features connected to physics, dynamic music, voice chat. One feature I’m especially proud of is how the racket “whooshes” as you swing it through the air."
       ],
@@ -65,6 +68,7 @@ var PORTFOLIO = {
     {
       id: "home-sports",
       title: "Home Sports",
+      tech: "Unity, C#, Wwise • Meta Quest",
       paragraphs: [
         "I’ve implemented dynamic and immersive audio systems for games such as pickleball, hockey, bowling, mini golf, and badminton, enhancing the social and competitive experience."
       ],
@@ -74,6 +78,7 @@ var PORTFOLIO = {
     {
       id: "gears-goo",
       title: "Gears &amp; Goo",
+      tech: "Unity, C#, Wwise • Apple Vision Pro",
       paragraphs: [
         "Contributed to the early audio integration work on Gears &amp; Goo (Apple Vision Pro), supporting Wwise setup, foundational audio-system implementation, and initial VO/dialogue-pipeline tasks."
       ],
@@ -111,8 +116,26 @@ var PORTFOLIO = {
 
   personalProjects: [
     {
+      id: "diffraction-ray-tracer",
+      title: "Real-Time Audio Diffraction Ray Tracer",
+      tech: "Unreal Engine 5, C++",
+      paragraphs: [
+        "Occlusion in games usually tells you how much sound is blocked, not where it actually comes from. I wanted a fully dynamic approach: rays detect geometric edges and cast onward from them as diffraction waypoints, moving a virtual source to where sound actually arrives from. Built in Unreal Engine as a personal project. The challenge was keeping it real-time viable."
+      ],
+      bullets: [
+        "Async ray casts distributed across frames to limit per-frame cost",
+        "Persistent edge cache to avoid rediscovering known diffraction points each sweep",
+        "String pulling so muffling reflects the true acoustic path length, not the ray's wander",
+        "Sounds on the same object share one pipeline through an audio bus",
+        "Lowpass on the occluded source; highpass and reverb driven by path length at the virtual position",
+        "Works with any geometry at runtime, no precomputation or markup"
+      ],
+      youtubeId: "VyMjl7I0bcY"
+    },
+    {
       id: "joel-sings",
       title: "Joel Sings",
+      tech: "Unity, C#, Wwise",
       paragraphs: [
         "An interactive music performance demo inspired by Alan Wake II’s “We Sing” scene."
       ],
@@ -123,21 +146,6 @@ var PORTFOLIO = {
       ],
       youtubeId: "Qv9CIEx3MI8",
       downloadUrl: "https://drive.google.com/file/d/1ZuZ_o-XyZhyeY3mHguCfroVXE7JT2Jsq/view?usp=sharing"
-    },
-    {
-      id: "diffraction-ray-tracer",
-      title: "Audio Diffraction Ray Tracer",
-      paragraphs: [
-        "Most games treat occlusion as binary. The room-and-portal alternative requires manual authoring and falls apart with destructible geometry. I wanted a fully dynamic approach: rays that detect geometric edges and cast onward from those as diffraction waypoints, moving a virtual source to where sound actually arrives from. Built in Unreal Engine as a personal project. The challenge was keeping it real-time viable."],
-      bullets: [
-        "Async ray casts distributed across frames to limit per-frame cost",
-        "Persistent edge cache to avoid rediscovering known diffraction points each sweep",
-        "Geometric edge detection as diffraction waypoints",
-        "Lowpass filter on the occluded source; highpass and reverb blended in from the virtual diffraction position",
-        "Works with any geometry at runtime, including destructible environments",
-        "Proof of concept, not yet stress-tested with multiple simultaneous sources"
-      ],
-      youtubeId: "-g8NSRYoBws"
     },
     {
       id: "sound-playground",

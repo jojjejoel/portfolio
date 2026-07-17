@@ -310,6 +310,15 @@ img { max-width: 100%; display: block; }
   letter-spacing: -0.02em;
 }
 
+.card-tech {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+  margin: -14px 0 18px;
+}
+
 .card-body p {
   color: var(--text-muted);
   margin-bottom: 12px;
@@ -849,9 +858,9 @@ body.detail-light .nav-links { border-bottom-color: rgba(0, 0, 0, 0.12); }
 
   .section-banner { margin: 0 16px 40px; padding: 22px 24px; }
 
-  .projects-list { padding: 0 16px; }
+  .projects-list { padding: 0 28px; }
 
-  .about-section { padding: var(--section-gap) 16px; }
+  .about-section { padding: var(--section-gap) 28px; }
 
   .detail-hero { padding: 40px 16px 0; }
   .detail-body { padding: 24px 16px 60px; }

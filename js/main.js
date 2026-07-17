@@ -109,6 +109,7 @@
     var textCol =
       '<div class="card-text">' +
         '<h3 class="card-title">' + project.title + '</h3>' +
+        (project.tech ? '<div class="card-tech">' + project.tech + '</div>' : '') +
         '<div class="card-body">' +
           paragraphsHtml(project.paragraphs) +
           bulletsHtml(project.bullets) +
