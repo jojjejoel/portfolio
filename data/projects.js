@@ -128,9 +128,9 @@ var PORTFOLIO = {
         "String pulling so muffling reflects the true acoustic path length, not the ray's wander",
         "Sounds on the same object share one pipeline through an audio bus",
         "Lowpass on the occluded source; highpass and reverb driven by path length at the virtual position",
-        "Works with any geometry at runtime, no precomputation or markup"
+        "Works with any geometry at runtime, including changes like doors opening or destroyed walls, no portals, precomputed rooms, or markup required"
       ],
-      youtubeId: "yLCkXsi_Sco"
+      youtubeId: "FY_Q5QJGMjQ"
     },
     {
       id: "joel-sings",
