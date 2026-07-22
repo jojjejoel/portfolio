@@ -130,7 +130,7 @@ var PORTFOLIO = {
         "Lowpass on the occluded source; highpass and reverb driven by path length at the virtual position",
         "Works with any geometry at runtime, no precomputation or markup"
       ],
-      youtubeId: "VyMjl7I0bcY"
+      youtubeId: "yLCkXsi_Sco"
     },
     {
       id: "joel-sings",
