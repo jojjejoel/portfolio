@@ -118,19 +118,34 @@ var PORTFOLIO = {
     {
       id: "diffraction-ray-tracer",
       title: "Real-Time Audio Diffraction Ray Tracer",
-      tech: "Unreal Engine 5, C++",
+      tech: "Unreal Engine 5, C++, MetaSound",
       paragraphs: [
-        "Occlusion in games usually tells you how much sound is blocked, not where it actually comes from. I wanted a fully dynamic approach: rays detect geometric edges and cast onward from them as diffraction waypoints, moving a virtual source to where sound actually arrives from. Built in Unreal Engine as a personal project. The challenge was keeping it real-time viable."
+        "Rays detect geometric edges and cast onward from them as diffraction waypoints, placing a virtual source where the sound actually arrives from rather than just attenuating it. The challenge was keeping it real-time viable."
       ],
       bullets: [
-        "Async ray casts distributed across frames to limit per-frame cost",
-        "Persistent edge cache to avoid rediscovering known diffraction points each sweep",
-        "String pulling so muffling reflects the true acoustic path length, not the ray's wander",
-        "Sounds on the same object share one pipeline through an audio bus",
-        "Lowpass on the occluded source; highpass and reverb driven by path length at the virtual position",
-        "Works with any geometry at runtime, including changes like doors opening or destroyed walls, no portals, precomputed rooms, or markup required"
+        "Works with any geometry at runtime, no portals or precomputed rooms",
+        "Async ray casts spread across frames to limit per-frame cost",
+        "Persistent edge cache so known diffraction points are not re-found",
+        "String pulling so muffling reflects the true path length",
+        "Lowpass on the occluded source, highpass and reverb from path length"
       ],
       youtubeId: "FY_Q5QJGMjQ"
+    },
+    {
+      id: "npc-voice-acoustics",
+      title: "NPC Voice Driven by Acoustic Simulation",
+      tech: "Unreal Engine 5, C++, MetaSound • Python, Chatterbox",
+      paragraphs: [
+        "Vocal effort follows the acoustic state of the diffraction ray tracer above: how far the sound really has to travel, not the straight line distance. A player two steps away behind a wall is treated as far off. The tricky part was that a far shout and a close whisper land at similar loudness, so the contrast has to come from timbre rather than level."
+      ],
+      bullets: [
+        "Lines keyed to context: behind a wall, a corner, out of sight",
+        "Barge-in interrupts mid-sentence when line of sight breaks",
+        "Runs through the same diffraction pipeline as any other sound",
+        "Voice cloned from my own recordings, one render per effort level",
+        "Scheduling logic is pure functions, covered by unit tests"
+      ],
+      youtubeId: "0SEGsmSWudY"
     },
     {
       id: "joel-sings",

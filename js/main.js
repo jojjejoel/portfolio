@@ -61,8 +61,8 @@
       '<div class="nav-right" id="nav-right">' +
         '<nav class="nav-links">' +
           '<a href="' + navLink('#shipped-games') + '">Shipped Games</a>' +
-          '<a href="' + navLink('#sound-redesigns') + '">Sound Redesigns</a>' +
           '<a href="' + navLink('#personal-projects') + '">Personal Projects</a>' +
+          '<a href="' + navLink('#sound-redesigns') + '">Sound Redesigns</a>' +
           '<a href="' + navLink('#about') + '">About</a>' +
         '</nav>' +
         '<div class="nav-social">' + socialIconsHtml() + '</div>' +
@@ -173,8 +173,8 @@
     if (document.getElementById('hero-video')) {
       renderHero();
       renderSection(PORTFOLIO.shippedGames, 'shipped-games-list', false);
-      renderSection(PORTFOLIO.soundRedesigns, 'sound-redesigns-list', true);
       renderSection(PORTFOLIO.personalProjects, 'personal-projects-list', false);
+      renderSection(PORTFOLIO.soundRedesigns, 'sound-redesigns-list', false);
       renderAbout();
     }
   });
