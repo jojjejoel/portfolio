@@ -121,7 +121,7 @@
       actions += '<a href="' + BASE + project.detailPage + '" class="btn-accent">' + (project.detailLabel || 'Read more') + '</a>';
     }
     if (project.downloadUrl) {
-      actions += '<a href="' + project.downloadUrl + '" class="btn-accent">Download application</a>';
+      actions += '<a href="' + project.downloadUrl + '" target="_blank" rel="noopener" class="btn-accent">' + (project.downloadLabel || 'Download application') + '</a>';
     }
     if (project.repoUrl) {
       actions += '<a href="' + project.repoUrl + '" target="_blank" rel="noopener" class="btn-accent">View source on GitHub</a>';

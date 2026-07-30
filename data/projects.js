@@ -137,7 +137,9 @@ var PORTFOLIO = {
         "Lowpass on the occluded source, highpass and reverb from path length"
       ],
       youtubeId: "FY_Q5QJGMjQ",
-      repoUrl: "https://github.com/jojjejoel/SpatialAudioRay"
+      repoUrl: "https://github.com/jojjejoel/SpatialAudioRay",
+      downloadUrl: "https://drive.google.com/file/d/1ELhPIuckoraKKf0xNHkx_-oMoyQMAEec/view?usp=sharing",
+      downloadLabel: "Download demo (Windows, 1 GB)"
     },
     {
       id: "npc-voice-acoustics",
@@ -154,7 +156,9 @@ var PORTFOLIO = {
         "Scheduling logic is pure functions, covered by unit tests"
       ],
       youtubeId: "0SEGsmSWudY",
-      repoUrl: "https://github.com/jojjejoel/SpatialAudioRay"
+      repoUrl: "https://github.com/jojjejoel/SpatialAudioRay",
+      downloadUrl: "https://drive.google.com/file/d/1ELhPIuckoraKKf0xNHkx_-oMoyQMAEec/view?usp=sharing",
+      downloadLabel: "Download demo (Windows, 1 GB)"
     },
     {
       id: "joel-sings",
