@@ -1,7 +1,6 @@
 var PORTFOLIO = {
 
-  heroYoutubeId: "cqgWBGhnobQ",
-  heroVideoCaption: "Game Audio Showreel",
+  heroYoutubeId: "IXztPeo3uPk",
 
   social: {
     email: "joelalexanderschultz@gmail.com",
@@ -45,11 +44,12 @@ var PORTFOLIO = {
       title: "Spatial Ops",
       tech: "Unity, C#, Wwise • Meta Quest, Pico",
       paragraphs: [
-        "I developed core audio systems for Spatial Ops, focusing on scalable weapon logic, VO behavior, and real-time audio effects. My work includes:"
+        "I developed core audio systems for Spatial Ops, focusing on scalable weapon logic, VO behavior, dynamic music, and real-time audio effects. My work includes:"
       ],
       bullets: [
         "Layered weapon-audio systems (spin, windup, firing, overheat) and perspective-dependent 1P/3P variants.",
         "VO bark logic with per-spawn voice assignment and probability-controlled triggering.",
+        "Dynamic music system driven by real-time combat intensity.",
         "DSP features such as bullet-time pitch reduction and explosion tinnitus/muffle states.",
         "RTPC-based systems like drone motor speed modulation.",
         "Occasionally contributing to sound design when needed."

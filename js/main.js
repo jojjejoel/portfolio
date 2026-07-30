@@ -108,12 +108,7 @@
     var heroVideo = document.getElementById('hero-video');
     if (!heroVideo) return;
 
-    // Labelled so a first-time visitor knows this is a reel, not a project clip.
-    var caption = PORTFOLIO.heroVideoCaption
-      ? '<p class="hero-video-caption">' + PORTFOLIO.heroVideoCaption + '</p>'
-      : '';
-
-    heroVideo.innerHTML = videoEmbed(PORTFOLIO.heroYoutubeId) + caption;
+    heroVideo.innerHTML = videoEmbed(PORTFOLIO.heroYoutubeId);
   }
 
   // ── Project Card ─────────────────────────────────────────────────────────
