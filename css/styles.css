@@ -104,7 +104,11 @@ img { max-width: 100%; display: block; }
   color: var(--accent-strong);
   letter-spacing: -0.01em;
   white-space: nowrap;
-  flex-shrink: 0;
+  /* Absorbs the squeeze so the row can never push the page sideways: the links,
+     icons and button are all nowrap and have no width to give. */
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .nav-right {
@@ -951,11 +955,55 @@ body.detail-light .nav-links { border-bottom-color: rgba(0, 0, 0, 0.12); }
   gap: 16px;
 }
 
-@media (max-width: 760px) {
-  .dl-media-pair { grid-template-columns: 1fr; }
+/* ─── Responsive ─────────────────────────────────────────────────────────── */
+/* Blocks run widest first, so a narrower one always wins on shared properties. */
+
+/* The horizontal nav needs roughly 1300px to lay out the logo, four links, the
+   icons and the button, none of which can wrap. Collapse to the hamburger well
+   before that, which also covers tablets and a half-width desktop window. */
+@media (max-width: 1024px) {
+  .nav-toggle { display: flex; }
+
+  .nav-right {
+    display: none;
+    position: absolute;
+    top: var(--nav-h);
+    left: 0;
+    right: 0;
+    background: var(--surface-strong);
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 16px 20px 20px;
+  }
+
+  .nav-right.open { display: flex; }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    width: 100%;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 16px;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 8px 0;
+    font-size: 1rem;
+    width: 100%;
+  }
 }
 
-/* ─── Responsive ─────────────────────────────────────────────────────────── */
+/* Between the hamburger and a wide desktop the full row fits only without the
+   role subtitle. Above and below this band it has room, so it stays. */
+@media (min-width: 1025px) and (max-width: 1360px) {
+  .nav-logo-sub { display: none; }
+}
+
 @media (max-width: 900px) {
   .project-card {
     grid-template-columns: minmax(0, 1fr);
@@ -1010,41 +1058,6 @@ body.detail-light .nav-links { border-bottom-color: rgba(0, 0, 0, 0.12); }
 
   #nav { padding: 0 20px; }
 
-  .nav-toggle { display: flex; }
-
-  .nav-right {
-    display: none;
-    position: absolute;
-    top: var(--nav-h);
-    left: 0;
-    right: 0;
-    background: var(--surface-strong);
-    border-bottom: 1px solid var(--border);
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0;
-    padding: 16px 20px 20px;
-  }
-
-  .nav-right.open { display: flex; }
-
-  .nav-links {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-    width: 100%;
-    padding-bottom: 16px;
-    border-bottom: 1px solid var(--border);
-    margin-bottom: 16px;
-  }
-
-  .nav-links a {
-    display: block;
-    padding: 8px 0;
-    font-size: 1rem;
-    width: 100%;
-  }
-
   /* One shared 24px gutter so the banner, cards and About all line up. */
   .section-banner { margin: 0 24px 40px; padding: 22px 24px; }
 
@@ -1077,6 +1090,8 @@ body.detail-light .nav-links { border-bottom-color: rgba(0, 0, 0, 0.12); }
   }
 
   .about-section { padding: var(--section-gap) 24px; }
+
+  .dl-media-pair { grid-template-columns: 1fr; }
 
   .detail-hero { padding: 40px 16px 0; }
   .detail-body { padding: 24px 16px 60px; }
