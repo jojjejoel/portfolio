@@ -35,6 +35,24 @@
     return '<div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/' + youtubeId + '?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="YouTube video"></iframe></div>';
   }
 
+  var COMPACT_THUMB_QUERY = '(max-width: 768px)';
+
+  function prefersThumbnails() {
+    return Boolean(window.matchMedia && window.matchMedia(COMPACT_THUMB_QUERY).matches);
+  }
+
+  // A player squeezed into a third of a phone screen renders its title bar and
+  // play button on top of each other, so at that size link out to a still instead.
+  function videoThumb(youtubeId, title) {
+    if (!youtubeId) {
+      return '<div class="video-wrapper"><div class="video-placeholder">' + ICONS.videoPlaceholder + '<span>Video coming soon</span></div></div>';
+    }
+    return '<a class="video-thumb" href="https://www.youtube.com/watch?v=' + youtubeId + '" target="_blank" rel="noopener" aria-label="Watch ' + title + ' on YouTube">' +
+      '<img src="https://i.ytimg.com/vi/' + youtubeId + '/mqdefault.jpg" alt="" loading="lazy">' +
+      '<span class="video-thumb-play" aria-hidden="true"></span>' +
+    '</a>';
+  }
+
   function paragraphsHtml(arr) {
     if (!arr || !arr.length) return '';
     return arr.map(function (p) { return '<p>' + p + '</p>'; }).join('');
@@ -56,7 +74,7 @@
     if (!nav) return;
 
     nav.innerHTML =
-      '<a href="' + (isSubpage ? BASE + 'index.html' : '#home') + '" class="nav-logo">Joel Schultz<span class="nav-logo-sub"> | Audio Programmer & Sound Designer</span></a>' +
+      '<a href="' + (isSubpage ? BASE + 'index.html' : '#home') + '" class="nav-logo">Joel Schultz<span class="nav-logo-sub"> | Audio Programmer &amp; Technical Sound Designer</span></a>' +
       '<button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>' +
       '<div class="nav-right" id="nav-right">' +
         '<nav class="nav-links">' +
@@ -88,7 +106,14 @@
 
   function renderHero() {
     var heroVideo = document.getElementById('hero-video');
-    if (heroVideo) heroVideo.innerHTML = videoEmbed(PORTFOLIO.heroYoutubeId);
+    if (!heroVideo) return;
+
+    // Labelled so a first-time visitor knows this is a reel, not a project clip.
+    var caption = PORTFOLIO.heroVideoCaption
+      ? '<p class="hero-video-caption">' + PORTFOLIO.heroVideoCaption + '</p>'
+      : '';
+
+    heroVideo.innerHTML = videoEmbed(PORTFOLIO.heroYoutubeId) + caption;
   }
 
   // ── Project Card ─────────────────────────────────────────────────────────
@@ -123,14 +148,45 @@
     return '<div class="' + cardClass + '">' + textCol + videoCol + '</div>';
   }
 
+  // Credits whose video is just the game's trailer, so the card carries the
+  // contribution in text instead of giving a full row to footage that shows none.
+  function renderCompactCard(project) {
+    return '<div class="compact-card">' +
+      (prefersThumbnails() ? videoThumb(project.youtubeId, project.title) : videoEmbed(project.youtubeId)) +
+      '<h4 class="compact-title">' + project.title + '</h4>' +
+      (project.tech ? '<div class="card-tech">' + project.tech + '</div>' : '') +
+      (project.compactLine ? '<p class="compact-line">' + project.compactLine + '</p>' : '') +
+    '</div>';
+  }
+
   function renderSection(projects, containerId, flip) {
     var container = document.getElementById(containerId);
     if (!container) return;
-    container.innerHTML = projects.filter(function (p) {
-      return !p.hidden;
-    }).map(function (p) {
+
+    var visible = projects.filter(function (p) { return !p.hidden; });
+    var full = visible.filter(function (p) { return !p.compact; });
+    var compact = visible.filter(function (p) { return p.compact; });
+
+    var html = full.map(function (p) {
       return renderProjectCard(p, flip || false);
     }).join('');
+
+    if (compact.length) {
+      html +=
+        '<div class="compact-block">' +
+          '<div class="compact-grid">' +
+            compact.map(function (p) { return renderCompactCard(p); }).join('') +
+          '</div>' +
+        '</div>';
+    }
+
+    container.innerHTML = html;
+  }
+
+  function renderAllSections() {
+    renderSection(PORTFOLIO.shippedGames, 'shipped-games-list', false);
+    renderSection(PORTFOLIO.personalProjects, 'personal-projects-list', false);
+    renderSection(PORTFOLIO.soundRedesigns, 'sound-redesigns-list', false);
   }
 
   // ── About ─────────────────────────────────────────────────────────────────
@@ -172,10 +228,16 @@
 
     if (document.getElementById('hero-video')) {
       renderHero();
-      renderSection(PORTFOLIO.shippedGames, 'shipped-games-list', false);
-      renderSection(PORTFOLIO.personalProjects, 'personal-projects-list', false);
-      renderSection(PORTFOLIO.soundRedesigns, 'sound-redesigns-list', false);
+      renderAllSections();
       renderAbout();
+
+      // Compact cards pick player or thumbnail at render time, so redraw when the
+      // breakpoint is crossed rather than leaving the wrong one in place.
+      if (window.matchMedia) {
+        var mq = window.matchMedia(COMPACT_THUMB_QUERY);
+        if (mq.addEventListener) mq.addEventListener('change', renderAllSections);
+        else if (mq.addListener) mq.addListener(renderAllSections);
+      }
     }
   });
 

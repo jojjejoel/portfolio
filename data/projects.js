@@ -1,6 +1,7 @@
 var PORTFOLIO = {
 
   heroYoutubeId: "cqgWBGhnobQ",
+  heroVideoCaption: "Game Audio Showreel",
 
   social: {
     email: "joelalexanderschultz@gmail.com",
@@ -10,7 +11,7 @@ var PORTFOLIO = {
   },
 
   about: {
-    photo: "assets/joel-photo.jpg",
+    photo: "assets/joel-dog.jpg",
     resumeUrl: "assets/Joel_Schultz_CV.pdf",
     paragraphs: [
       "I’m Joel Schultz, an audio programmer with a focus on real-time audio systems, tools, and sound design for games.",
@@ -63,7 +64,9 @@ var PORTFOLIO = {
         "I worked as an audio programmer on this game; implementing audio features connected to physics, dynamic music, voice chat. One feature I’m especially proud of is how the racket “whooshes” as you swing it through the air."
       ],
       bullets: [],
-      youtubeId: "OMtUn_7GzFI"
+      youtubeId: "OMtUn_7GzFI",
+      compact: true,
+      compactLine: "Physics-driven audio, dynamic music, voice chat, and a racket that whooshes as you swing it"
     },
     {
       id: "home-sports",
@@ -73,7 +76,9 @@ var PORTFOLIO = {
         "I’ve implemented dynamic and immersive audio systems for games such as pickleball, hockey, bowling, mini golf, and badminton, enhancing the social and competitive experience."
       ],
       bullets: [],
-      youtubeId: "vEIJhNWjwi0"
+      youtubeId: "vEIJhNWjwi0",
+      compact: true,
+      compactLine: "Audio systems across pickleball, hockey, bowling, mini golf, and badminton"
     },
     {
       id: "gears-goo",
@@ -83,7 +88,9 @@ var PORTFOLIO = {
         "Contributed to the early audio integration work on Gears &amp; Goo (Apple Vision Pro), supporting Wwise setup, foundational audio-system implementation, and initial VO/dialogue-pipeline tasks."
       ],
       bullets: [],
-      youtubeId: "4FnuU17T3I4"
+      youtubeId: "4FnuU17T3I4",
+      compact: true,
+      compactLine: "Early Wwise setup, foundational audio systems, and initial VO pipeline work"
     }
   ],
 
