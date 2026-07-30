@@ -123,6 +123,9 @@
     if (project.downloadUrl) {
       actions += '<a href="' + project.downloadUrl + '" class="btn-accent">Download application</a>';
     }
+    if (project.repoUrl) {
+      actions += '<a href="' + project.repoUrl + '" target="_blank" rel="noopener" class="btn-accent">View source on GitHub</a>';
+    }
 
     var actionsHtml = actions ? '<div class="card-actions">' + actions + '</div>' : '';
 

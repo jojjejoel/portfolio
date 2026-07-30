@@ -136,7 +136,8 @@ var PORTFOLIO = {
         "String pulling so muffling reflects the true path length",
         "Lowpass on the occluded source, highpass and reverb from path length"
       ],
-      youtubeId: "FY_Q5QJGMjQ"
+      youtubeId: "FY_Q5QJGMjQ",
+      repoUrl: "https://github.com/jojjejoel/SpatialAudioRay"
     },
     {
       id: "npc-voice-acoustics",
@@ -152,7 +153,8 @@ var PORTFOLIO = {
         "Voice cloned from my own recordings, one render per effort level",
         "Scheduling logic is pure functions, covered by unit tests"
       ],
-      youtubeId: "0SEGsmSWudY"
+      youtubeId: "0SEGsmSWudY",
+      repoUrl: "https://github.com/jojjejoel/SpatialAudioRay"
     },
     {
       id: "joel-sings",
